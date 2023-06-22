@@ -2,8 +2,7 @@
     <body>
         <title>Payment</title>
     <h1>Ad payment form<h1>
-        Required fields are followed by <span title="Required field">*</span>.
-        <br>
+    <h3>Required fields are followed by <span title="Required field">*</span>.<h3>
         <h2>Contact information<h2>
         <label for="name">Name <span title="Required field">*</span></label>
         <input name="firstname" type="text" id="name" />
@@ -11,19 +10,28 @@
         <label for="email">E-mail <span title="Required field">*</span></label>
         <input name="e-mail" type="email" id="email" />
             <br>
-            Password *
+        <label for="password">Password <span title="Required field">*</span></label>
+        <input name="password" type="password" id="password" />
             <br>
         <h2>Payment information<h2>
-            Card type * :
+         <label for="card">Card type <span title="Required field">*</span></label>
+            <select name="cards" id="card">
+                <option value="card1">Visa</option>
+                <option value="card2">MasterCard</option>
+                <option value="card3">Other</option>
+            </select>
             <br>
-            Card number *
+         <label for="card_num">Card number <span title="Required field">*</span></label>
+         <input type="int" id="card_num" name="card_num" placeholder="1234-1234-1234-1234"
+            pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" maxlength="16">
             <br>
-            Expiration date *
-        <br><br>
+         <label for="exp_date">Expiration date <span title="Required field">*</span></label>
+         <input name="exp_date" type="date" id="exp_date" />
+            <br><br>
         <h4>Agree with terms and conditions <input type="checkbox"><h4>
+            <br>
+        <button type="button" onclick="alert('Payment confirmed! Have a nice day!')">Pay</button>
     </body>
-
-
 
 
 
